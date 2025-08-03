@@ -1,0 +1,23 @@
+
+export const images = {
+    basketball: "/basket ball.png",
+    football: "/football.png",
+    volleyball: "/volleyball.png",
+    cycling: "/cycling.png",
+    twoplayers: "/twoplayers.png",
+    referee: "/referee.png",
+    staf1: "/staf1.png",
+    staf2: "/staf2.png",
+    staf3: "/staf3.png",
+    rewarding: "/rewarding.png",
+    spectators: "/spectators.png",
+    logo: "/logo.png",
+    home: "/home.jpg",
+    handball: "/handball.jpeg",
+    rugby: "/rugby.jpeg",
+    swimming: "/swimming.jpeg",
+    athletics: "/athletics.jpeg",
+    sponsor1: "/sponsor1.png",
+    sponsor2: "/sponsor2.png",
+    
+}
