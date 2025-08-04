@@ -56,14 +56,14 @@ const OurTeam = () => {
         <HomepageSection title='Our Team'>
             <div className='px-3'>
                 
-                <div className='flex flex-row  mb-6 overflow-x-auto'>
+                <div className='flex flex-row  mb-6 overflow-x-auto scrollbar-hide'>
                     {currentItems.map((item, index) => (
-                        <div key={index} className='bg-white  flex-shrink-0 w-64'>
+                        <div key={index} className='bg-white  flex-shrink-0 w-72'>
                             <div className={clsx('flex flex-col', {
-                                'flex-col': index % 2 === 0,
+                                
                                 'flex-col-reverse': index % 2 !== 0
                             })}>
-                                <div className='w-full h-48 mb-3'>
+                                <div className='w-full h-54 mb-3'>
                                     <Image 
                                         src={item.image} 
                                         alt={item.name} 
@@ -72,7 +72,7 @@ const OurTeam = () => {
                                         className='w-full h-full object-cover ' 
                                     />
                                 </div>
-                                <div className='text-center space-y-2 p-4'>
+                                <div className='text-center  px-4 h-54 flex flex-col justify-center'>
                                     <h3 className='text-lg font-semibold text-black mb-1'>
                                         {item.name}
                                         <div className='w-22 h-0.5 bg-blue-500 mx-auto mt-1'></div>
