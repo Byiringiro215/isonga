@@ -1,10 +1,13 @@
+import HomepageSection from '@/components/layout/HomepageSection'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      
-    </div>
+    <HomepageSection title='Gallery'>
+<div>
+  hi
+</div>
+    </HomepageSection>
   )
 }
 

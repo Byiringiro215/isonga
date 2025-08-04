@@ -1,6 +1,7 @@
 import { images } from '@/assets/images';
 import HomepageSection from '@/components/layout/HomepageSection'
 import Button from '@/components/ui/Button';
+import clsx from 'clsx';
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 import React, { useState } from 'react'
 
@@ -65,7 +66,11 @@ const Inspiration = () => {
              <div className='flex gap-2'>
                  {
                      Array.from({length: totalPages}).map((_,index)=>(
-                         <button key={index} className={`w-6 h-6 rounded-full text-center text-white flex items-center justify-center cursor-pointer ${currentIndex === index ? 'bg-blue-500' : ''}`} onClick={()=>setCurrentIndex(index)}>
+                         <button 
+                         key={index}
+                          className={clsx('w-6 h-6 rounded-full text-center text-gray-500 font-bold flex items-center justify-center cursor-pointer',
+                            currentIndex === index ? 'bg-blue-500 text-white' : ''
+                          )} onClick={()=>setCurrentIndex(index)}>
                              {index + 1}
                          </button>
                      ))

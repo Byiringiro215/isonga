@@ -1,3 +1,4 @@
+import { images } from '@/assets/images';
 import React from 'react'
 
 interface HomepageSectionProps {
@@ -8,21 +9,27 @@ interface HomepageSectionProps {
 
 const HomepageSection = ({children, title, }: HomepageSectionProps) => {
   return (
-    <div className='w-full p-4 border-b border-blue-500 border-2  '>
+    <div className='w-full px-4 py-8 min-h-screen'>
+        
         <div className='flex items-center py-2 px-4 gap-4 w-full '>
             <h1 className='text-2xl font-bold'>{title}</h1>
             <div className="flex-1 relative">
                       {/* Blue line */}
-                      <div className="h-1 bg-[#007bff] rounded-full"></div>
+                      <div className="h-2 bg-[#007bff] "></div>
                       
                       {/* Blue circle at the end */}
-                      <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-[#007bff] rounded-full"></div>
+                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-8 h-6 bg-[#007bff] rounded-full">
+                        <img src={images.dot} alt="" className='w-full h-full object-cover' />
+                      </div>
                   </div>
         </div>
         <div className='mt-4'>
             {children}
         </div>
-      
+        <div className='flex justify-center items-center gap-32 mt-18'>
+            <div className='w-1/3 border-b-2  border-sky-500 shadow-lg'></div>
+            <div className='w-1/3 border-b-2  border-sky-500 shadow-lg'></div>
+        </div>
     </div>
   )
 }
