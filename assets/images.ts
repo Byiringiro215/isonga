@@ -19,5 +19,7 @@ export const images = {
     athletics: "/athletics.jpeg",
     sponsor1: "/sponsor1.png",
     sponsor2: "/sponsor2.png",
-    
+    dot: "/dot.png",
+    sports: "/sports.png",
+    biglogo: "/biglogo.png",
 }
