@@ -1,5 +1,6 @@
 'use client'
 import { images } from '@/assets/images';
+import Image from 'next/image'
 import HomepageSection from '@/components/layout/HomepageSection'
 import React, { useState } from 'react'
 import clsx from 'clsx'
@@ -70,7 +71,7 @@ const Categories = () => {
                         'flex-col-reverse': index % 2 !== 0
                     })}>
                         <span className='text-sm font-semibold text-center rounded-md bg-[#EBEEF3] text-blue-950 uppercase p-2'>{item.title}</span>
-                        <img src={item.image} alt={item.title} className='w-full h-[80%] object-cover rounded-md' height={300} width={300}/>
+                        <Image src={item.image} alt={item.title} className='w-full h-[80%] object-cover rounded-md' height={300} width={300}/>
                     </div>
                 ))}
             </div>

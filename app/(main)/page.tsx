@@ -1,7 +1,5 @@
 'use client'
 import Hero from "@/components/sections/home/hero";
-import Image from "next/image";
-import HomepageSection from "@/components/layout/HomepageSection";
 import Trendingnews from "@/components/sections/home/Trendingnews";
 import Categories from "@/components/sections/home/Categories";
 import SpecialEvents from "@/components/sections/home/SpecialEvents";

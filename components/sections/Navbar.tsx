@@ -1,9 +1,10 @@
 'use client'
 import React, { useState } from "react";
-import { Moon, Menu, X, LogOut } from "lucide-react";
+import {  Menu, X} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { images } from "@/assets/images";
+import Image from 'next/image'
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -27,7 +28,7 @@ const Navbar = () => {
     <div className="bg-[#007bff] h-16 md:h-20 flex items-center justify-between relative">
       {/* Left Side: Logo */}
       <div className="text-white font-bold text-xl md:text-3xl flex items-center ml-4 md:ml-6 gap-2 leading-none">
-        <img src={images.logo} alt="logo" className="h-8 md:h-12" />
+        <Image src={images.logo} alt="logo" width={48} height={48} className="h-8 md:h-12 w-auto" />
         <span className="hidden sm:inline">ISONGA</span>
       </div>
 

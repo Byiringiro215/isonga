@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useNewsStore } from '@/store/newsStore'
@@ -18,7 +19,7 @@ const EventArticlePage = () => {
       <div className="min-h-screen bg-white px-7 py-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Event not found</h1>
-          <p className="text-gray-600 mb-6">The event you're looking for doesn't exist.</p>
+          <p className="text-gray-600 mb-6">The event you&apos;re looking for doesn&apos;t exist.</p>
           <Link 
             href="/news"
             className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200"
@@ -59,8 +60,8 @@ const EventArticlePage = () => {
 
           {/* Event Body */}
           <div className="prose prose-lg max-w-none">
-            <div className="my-6 md:my-8">
-              <img src="/api/placeholder/800/400" alt="Event image" className="w-full h-64 md:h-96 object-cover rounded-lg" />
+            <div className="my-6 md:my-8 relative w-full h-64 md:h-96">
+              <Image src={event.image} alt="Event image" fill className="object-cover rounded-lg" />
             </div>
             
             <p className="text-base md:text-lg leading-relaxed mb-6">

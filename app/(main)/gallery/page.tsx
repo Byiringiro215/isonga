@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import HomepageSection from '@/components/layout/HomepageSection'
+// import HomepageSection from '@/components/layout/HomepageSection'
+import Image from 'next/image'
 import { images } from '@/assets/images'
 
 // TypeScript interfaces
@@ -261,8 +262,8 @@ const GalleryPage = () => {
                        <div className="h-2 bg-[#007bff] "></div>
                        
                        {/* Blue circle at the end */}
-                       <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-6 h-4 md:w-8 md:h-6 bg-[#007bff] rounded-full">
-                         <img src={images.dot} alt="" className='w-full h-full object-cover' />
+                       <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-6 h-4 md:w-8 md:h-6 bg-[#007bff] rounded-full relative">
+                         <Image src={images.dot} alt="" fill className='object-cover' />
                        </div>
                    </div>
           </div>
@@ -343,10 +344,11 @@ const GalleryPage = () => {
             {filteredItems.map((item) => (
               <div key={item.id} className="group cursor-pointer">
                 <div className="relative w-full h-40 sm:h-48 overflow-hidden bg-gray-100 rounded-lg">
-                  <img
+                  <Image
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-full  object-cover transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   
                   {/* Video overlay for videos */}

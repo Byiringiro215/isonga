@@ -1,6 +1,5 @@
 import React from 'react';
 import { Phone, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
-import Button from '@/components/ui/Button';
 import { images } from '@/assets/images';
 import Image from 'next/image';
 

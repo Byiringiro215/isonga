@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { images } from '@/assets/images'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { ourTeamData } from '@/data';
 import { useRouter } from 'next/navigation';
 

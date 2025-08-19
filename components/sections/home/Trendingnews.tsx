@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import HomepageSection from '../../layout/HomepageSection'
 import { images } from '@/assets/images'
 
@@ -35,8 +36,8 @@ const trendingnews = [
 const TrendingnewsCard = ({ title, image, description, date }: TrendingnewsProps) => {
     return (
         <div className='flex gap-4 items-center'>
-            <div className='w-32 h-32 flex-shrink-0'>
-                <img src={image} alt="" className='w-full h-full object-cover rounded-lg' />
+            <div className='w-32 h-32 flex-shrink-0 relative'>
+                <Image src={image} alt="" fill className='object-cover rounded-lg' />
             </div>
             <div className='flex-col gap-2 '>
                 <h3 className=' font-bold text-sm md:text-lg'>{title}</h3>
@@ -58,7 +59,7 @@ const Trendingnews = () => {
                     </div>
                     <div className='flex flex-col gap-2'>
                         <span className='text-white'>LDK -03 jun 2025</span>
-                        <p className='text-white text-lg font-bold'>Empowering Girl's Power in Basketball</p>
+                        <p className='text-white text-lg font-bold'>Empowering Girl&apos;s Power in Basketball</p>
                     </div>
                 </div>
                 <div className='flex flex-col lg:w-1/2 gap-4 px-3' >
