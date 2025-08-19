@@ -10,7 +10,7 @@ import { useNewsStore, NewsCard, EventCard, CompetitionCard, UpcomingCompetition
 const newsCards: NewsCard[] = [
   {
     id: 1,
-    image:images.athelets,
+    image:images.basketball,
     date: "May 29, 2025",
     title: "Empowering athletes through ISONGA program",
     description: "The ISONGA program continues to make significant strides in developing young athletic talent across Rwanda. Our comprehensive approach to sports development includes not just physical training, but also mental preparation and character building.",
@@ -34,7 +34,7 @@ const newsCards: NewsCard[] = [
   },
   {
     id: 3,
-    image:images.basketball,
+    image:images.athelets,
     date: "May 20, 2025",
     title: "Sonia Abizera qualifies for elite running status",
     description: "Sonia Abizera, the women's 100-meter winner, credits her achievements to the ISONGA program, which helped her qualify as an elite runner. Peter Ndacyayisenga, Rwanda Athletics Federation Technical Director, praised her performance.",
