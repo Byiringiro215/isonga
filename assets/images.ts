@@ -39,5 +39,7 @@ export const images = {
   volley:"/volley.jpeg",
   foot:'/foot.jpeg',
   insipirations:'/insipirations.png',
-  ins:'/ins.jpg'
+  ins:'/ins.jpg',
+  javelin:'/javelin.png',
+  hand:'/hand.png'
 };

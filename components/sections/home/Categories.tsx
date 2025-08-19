@@ -30,11 +30,11 @@ const categories = [
     },
     {
         title: 'handball',
-        image: images.handball,
+        image: images.handbal,
     },
     {
-        title: 'rugby',
-        image: images.rugby,
+        title: 'javeline',
+        image: images.javelin,
     },
     {
         title: 'swimming',
@@ -42,7 +42,7 @@ const categories = [
     },
     {
         title: 'athletics',
-        image: images.athletics,
+        image: images.athelets,
     },
   
   
@@ -60,7 +60,9 @@ const Categories = () => {
         setCurrentPage(currentPage - 1);
     }
     const handleNext = () => {
-        setCurrentPage(currentPage + 1);
+            if(currentPage < totalPages){
+                setCurrentPage(currentPage + 1);
+            }
     }
   return (
     <HomepageSection title='Categories'>
@@ -76,8 +78,8 @@ const Categories = () => {
                 ))}
             </div>
             <div className='flex justify-between items-center mt-6'>
-                <Button title='Previous' variant='primary' onClick={handlePrevious}/>
-                <Button title='Next' variant='primary' onClick={handleNext}/>
+                <Button title='Previous' variant='primary' onClick={handlePrevious} disabled={currentPage === 1}/>
+                <Button title='Next' variant='primary'  onClick={handleNext} disabled={endIndex === totalPages}/>
             </div>
         </div>
     </HomepageSection>

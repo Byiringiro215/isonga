@@ -206,7 +206,7 @@ const NewsPage = () => {
                       <div className="h-2 bg-[#007bff] "></div>
                       
                       {/* Blue circle at the end */}
-                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-6 h-4 md:w-8 md:h-6 bg-[#007bff] rounded-full relative">
+                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-6 h-4 md:w-8 md:h-6 bg-[#007bff] rounded-full ">
                         <Image src={images.dot} alt="" fill className='object-cover' />
                       </div>
                   </div>
