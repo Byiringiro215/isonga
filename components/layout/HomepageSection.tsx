@@ -9,7 +9,7 @@ interface HomepageSectionProps {
 
 const HomepageSection = ({children, title, }: HomepageSectionProps) => {
   return (
-    <div className='w-full px-4 py-8 min-h-screen'>
+    <div className='w-full px-4 py-4 min-h-screen'>
         
         <div className='flex items-center py-2 px-4 gap-4 w-full '>
             <h1 className='text-2xl font-bold'>{title}</h1>

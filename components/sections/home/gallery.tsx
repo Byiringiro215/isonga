@@ -1,12 +1,15 @@
+'use client'
 import { images } from '@/assets/images'
 import HomepageSection from '@/components/layout/HomepageSection'
 import Button from '@/components/ui/Button'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const galleryData = [images.twoplayers,images.spectators,images.cycling,images.rewarding,images.basketball,images.twoplayers]
+const galleryData = [images.twoplayers,images.spectators,images.riding,images.rewarding,images.basketball,images.twoplayers]
 
 const Gallery = () => {
+    const router=useRouter();
   return (
     <HomepageSection title='Gallery'>
         <div className='flex flex-wrap justify-center  items-center gap-4  w-full'>
@@ -19,7 +22,7 @@ const Gallery = () => {
              }
         </div>
         <div className='flex justify-center mt-4 '>
-            <Button title='Open Gallery' variant='primary' onClick={()=>{}} />
+            <Button title='Open Gallery' variant='primary' onClick={()=>router.push('/gallery')} />
         </div>
     </HomepageSection>
   )
