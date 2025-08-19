@@ -1,4 +1,5 @@
 import { images } from '@/assets/images';
+import Image from 'next/image'
 import React from 'react'
 
 interface HomepageSectionProps {
@@ -18,8 +19,8 @@ const HomepageSection = ({children, title, }: HomepageSectionProps) => {
                       <div className="h-2 bg-[#007bff] "></div>
                       
                       {/* Blue circle at the end */}
-                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-8 h-6 bg-[#007bff] rounded-full">
-                        <img src={images.dot} alt="" className='w-full h-full object-cover' />
+                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-8 h-6 bg-[#007bff] rounded-full relative">
+                        <Image src={images.dot} alt="" fill className='object-cover' />
                       </div>
                   </div>
         </div>

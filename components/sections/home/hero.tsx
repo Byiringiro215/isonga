@@ -19,7 +19,7 @@ export default function Hero() {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    let timeoutId:any;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     if (isTyping) {
       if (charIndex < phraseLines[lineIndex].length) {

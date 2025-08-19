@@ -281,7 +281,7 @@ const VerifyOtp = () => {
 
               {/* Resend Code Link */}
               <div className="text-center">
-                <span className="text-gray-600 text-xs">Didn't receive the code? </span>
+                <span className="text-gray-600 text-xs">Didn&apos;t receive the code? </span>
                 <button type="button" className="text-blue-600 hover:text-blue-800 font-medium text-xs">
                   Resend
                 </button>

@@ -1,12 +1,12 @@
 'use client'
-import { images } from '@/assets/images';
+
 import HomepageSection from '@/components/layout/HomepageSection';
 import Button from '@/components/ui/Button';
 import { ourTeamData } from '@/data';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { useState } from 'react'
-
+ 
 
 
 const OurTeam = () => {

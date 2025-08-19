@@ -1,4 +1,4 @@
-import { images } from '@/assets/images'
+
 import HomepageSection from '@/components/layout/HomepageSection'
 import Button from '@/components/ui/Button'
 import React from 'react'

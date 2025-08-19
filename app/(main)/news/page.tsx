@@ -163,9 +163,9 @@ const NewsPage = () => {
     console.log('View All clicked')
   }
 
-  const handleShare = () => {
-    console.log('Share clicked')
-  }
+  // const handleShare = () => {
+  //   console.log('Share clicked')
+  // }
 
   const handleFilterClick = (filter: string) => {
     console.log('Filter clicked:', filter)
@@ -206,8 +206,8 @@ const NewsPage = () => {
                       <div className="h-2 bg-[#007bff] "></div>
                       
                       {/* Blue circle at the end */}
-                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-6 h-4 md:w-8 md:h-6 bg-[#007bff] rounded-full">
-                        <img src={images.dot} alt="" className='w-full h-full object-cover' />
+                      <div className="absolute -right-0 top-1/2 transform -translate-y-1/2 w-6 h-4 md:w-8 md:h-6 bg-[#007bff] rounded-full relative">
+                        <Image src={images.dot} alt="" fill className='object-cover' />
                       </div>
                   </div>
         </div>
@@ -268,8 +268,8 @@ const NewsPage = () => {
         <div className="space-y-4 md:space-y-6">
           {newsCards.map((card: NewsCard) => (
             <div key={card.id} className="border border-gray-200 rounded-lg p-3 md:p-4 flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
-              <div className="w-full md:w-80 h-48 md:h-54 bg-gray-300 rounded-lg flex-shrink-0">
-                <img src={card.image} alt="" className='size-full rounded-lg' />
+              <div className="w-full md:w-80 h-48 md:h-54 bg-gray-300 rounded-lg flex-shrink-0 relative">
+                <Image src={card.image ?? images.football} alt="" fill className='object-cover rounded-lg' />
               </div>
               <div className="flex-1 flex flex-col justify-between">
                 <div>
@@ -279,8 +279,8 @@ const NewsPage = () => {
                     {card.description}
                   </p>
                   <div className="flex items-center space-x-2 mb-3">
-                    <div className="w-6 h-6 md:w-8 md:h-8  bg-gray-400 rounded-full">
-                      <img src={card.author.avatar} alt="" className='rounded-full size-8' />
+                    <div className="w-6 h-6 md:w-8 md:h-8  bg-gray-400 rounded-full overflow-hidden flex items-center justify-center">
+                      <Image src={card.author.avatar} alt="" width={32} height={32} className='rounded-full' />
                     </div>
                     <div>
                       <div className="text-xs md:text-sm font-medium text-gray-900">{card.author.name}</div>
@@ -316,8 +316,8 @@ const NewsPage = () => {
           {eventCards.map((card: EventCard) => (
             <div key={card.id} className="bg-white overflow-hidden shadow-sm rounded-lg">
               <div className="relative">
-                <div className="w-full h-48 md:h-60 bg-gray-300">
-                  <img src={card.image} alt="" className='size-full ' />
+                <div className="w-full h-48 md:h-60 bg-gray-300 relative">
+                  <Image src={card.image} alt="" fill className='object-cover' />
                 </div>
                 <div className="absolute bottom-2 right-2 bg-white bg-opacity-90 px-2 py-1 rounded text-xs text-gray-600">
                   {card.date}
@@ -366,8 +366,8 @@ const NewsPage = () => {
               {competitionCards.map((card: CompetitionCard) => (
                 <div key={card.id} className="border border-blue-200 rounded-lg p-3 md:p-4">
                   <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
-                    <div className="w-full md:w-60 h-48 md:h-54 bg-gray-300 rounded-lg flex-shrink-0">
-                         <img src={card.image} alt="" className='size-full rounded-lg ' />
+                    <div className="w-full md:w-60 h-48 md:h-54 bg-gray-300 rounded-lg flex-shrink-0 relative">
+                         <Image src={card.image} alt="" fill className='object-cover rounded-lg ' />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">{card.title}</h3>
