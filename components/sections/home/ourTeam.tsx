@@ -1,48 +1,13 @@
+'use client'
 import { images } from '@/assets/images';
 import HomepageSection from '@/components/layout/HomepageSection';
 import Button from '@/components/ui/Button';
+import { ourTeamData } from '@/data';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { useState } from 'react'
 
-interface ourTeamProps {
-    name: string;
-    image: string;
-    role: string;
-}
 
-const ourTeamData: ourTeamProps[] = [
-    {
-        name: 'John Doe',
-        image: images.staf1,
-        role: 'The founder and initiator of Isonga program',
-    },
-    {
-        name: 'John Doe',
-        image: images.staf2,
-        role: 'The founder and initiator of Isonga program',
-    },
-    {
-        name: 'John Doe',
-        image: images.staf3,
-        role: 'The founder and initiator of Isonga program',
-    },
-    {
-        name: 'John Doe',
-        image: images.staf1,
-        role: 'The founder and initiator of Isonga program',
-    },
-    {
-        name: 'John Doe',
-        image: images.staf2,
-        role: 'The founder and initiator of Isonga program',
-    },
-    {
-        name: 'John Doe',
-        image: images.staf3,
-        role: 'The founder and initiator of Isonga program',
-    },
-]
 
 const OurTeam = () => {
     const [currentPage, setCurrentPage] = useState(0);

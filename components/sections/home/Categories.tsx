@@ -21,11 +21,11 @@ const categories = [
     },
     {
         title: 'cycling',
-        image: images.cycling,
+        image: images.riding,
     },
     {
         title: 'volleyball',
-        image: images.volleyball,
+        image: images.volley,
     },
     {
         title: 'handball',
@@ -64,9 +64,9 @@ const Categories = () => {
   return (
     <HomepageSection title='Categories'>
         <div className='px-3 '>
-            <div className='flex gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-4'>
                 {currentItems.map((item,index)=>(
-                    <div key={index} className={clsx('flex flex-col gap-2', {
+                    <div key={index} className={clsx('flex flex-col w-full gap-2', {
                         'flex-col-reverse': index % 2 !== 0
                     })}>
                         <span className='text-sm font-semibold text-center rounded-md bg-[#EBEEF3] text-blue-950 uppercase p-2'>{item.title}</span>

@@ -129,7 +129,7 @@ export default function Hero() {
           {displayedText[2]}
           {isTyping && lineIndex === 2 && (
             <span className={`inline-block w-[3px] h-[0.8em] bg-[#00AEEF] ml-1 align-baseline transition-opacity duration-100 ${showCursor ? 'opacity-100' : 'opacity-0'}`}>
-              |
+              
             </span>
           )}
         </p>

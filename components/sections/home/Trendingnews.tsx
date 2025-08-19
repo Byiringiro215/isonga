@@ -38,10 +38,10 @@ const TrendingnewsCard = ({ title, image, description, date }: TrendingnewsProps
             <div className='w-32 h-32 flex-shrink-0'>
                 <img src={image} alt="" className='w-full h-full object-cover rounded-lg' />
             </div>
-            <div className='flex-col gap-2'>
-                <h3 className='text-lg font-bold'>{title}</h3>
-                <p className='text-sm text-[#696868]'>{description}</p>
-                <p className='text-sm text-[#696868]'>{date}</p>
+            <div className='flex-col gap-2 '>
+                <h3 className=' font-bold text-sm md:text-lg'>{title}</h3>
+                <p className=' text-[#696868] text-xs'>{description}</p>
+                <p className=' text-[#696868] text-xs md:text-sm'>{date}</p>
             </div>
         </div>
     )
@@ -51,8 +51,8 @@ const TrendingnewsCard = ({ title, image, description, date }: TrendingnewsProps
 const Trendingnews = () => {
     return (
         <HomepageSection title="Trending news">
-            <div className='flex gap-6 '>
-                <div style={{ backgroundImage: `url(${images.home})` }} className='w-full  bg-cover bg-center p-3 rounded-md flex flex-col justify-between'>
+            <div className='flex-col  lg:flex lg:flex-row justify-between '>
+                <div style={{ backgroundImage: `url(${images.girls})` }} className='lg:w-2/3 h-[300px] md:h-[400px] lg:h-[450px] mb-10 lg:mb-0      bg-cover bg-center p-3 rounded-md flex flex-col justify-between'>
                     <div className='border-2 border-white  p-1 text-center w-1/3'>
                         <span className='text-white font-semibold'>Basketball</span>
                     </div>
@@ -61,7 +61,7 @@ const Trendingnews = () => {
                         <p className='text-white text-lg font-bold'>Empowering Girl's Power in Basketball</p>
                     </div>
                 </div>
-                <div className='flex flex-col gap-4 px-3' >
+                <div className='flex flex-col lg:w-1/2 gap-4 px-3' >
                     {trendingnews.map((item, index) => (
                         <TrendingnewsCard key={index} {...item} />
                     ))}
